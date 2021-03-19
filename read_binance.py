@@ -47,7 +47,10 @@ def new_coins():
 
                     exist = findCoin(base_announcement_url + new_url)
                     if exist is None:
-                        send_mail(base_announcement_url + new_url, "pauloxti@gmail.com, pauloxti@gmail.com")
+                        for x in range(30):
+                            send_mail(base_announcement_url + new_url, "pauloxti@gmail.com, erquesabesabe@gmail.com, rodriguezcardosojorge@gmail.com, robertobaus1@gmail.com")
+                            time.sleep(10.0)
+
                         with open("news.csv", "a") as csv_file:
                             writer = csv.writer(csv_file)
                             writer.writerow([base_announcement_url + new_url, article_date])
@@ -82,6 +85,5 @@ def send_mail(msg, to):
 
 
 if __name__ == "__main__":
-    # send_mail("sdsd", "pauloxti@gmail.com, pauloxti@gmail.com")
     while True:
         new_coins()
