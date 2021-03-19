@@ -50,10 +50,18 @@ async def new_coins(client):
                     exist = findCoin(base_announcement_url + new_url)
                     if exist is None:
                         for x in range(30):
-                            destination_user_username = 'Todos al tren'
+                            destination_user_username = 'erquesabesabe'
                             entity = await client.get_entity(destination_user_username)
                             await client.send_message(entity=entity,
                                                       message="NUEVA MONEDA EN BINANCE, APRESURATE NEGRO " + base_announcement_url + new_url)
+
+                            destination_user_username = 'NKT43'
+                            entity = await client.get_entity(destination_user_username)
+                            await client.send_message(entity=entity,
+                                                      message="NUEVA MONEDA EN BINANCE, APRESURATE NEGRO " + base_announcement_url + new_url)
+
+
+
                             # send_mail(base_announcement_url + new_url, "pauloxti@gmail.com, erquesabesabe@gmail.com, rodriguezcardosojorge@gmail.com, robertobaus1@gmail.com")
                             time.sleep(5.0)
 
